@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.addTodo, .todoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoContainer {
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.addTodo label {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.addTodo input {
+    padding: 1rem;
+    border: 1px solid rgb(95, 95, 95)
+}
+
+.addTodo button {
+    border: 1px solid rgb(95, 95, 95);
+    background-color: rgb(95, 95, 95);
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0 10px 10px 0px;
+    cursor: pointer;
+}
+
+.todoContentContainer {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-bottom: 10px
+}
+
+.todoContentContainer p {
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all;
+    text-overflow: ellipsis;
+}
+
+.todoContentContainer p:hover, .acceptButton, .deleteButton {
+    overflow: visible;
+    white-space: normal;
+}
+
+.todoContentContainer p:hover {
+    border: red
+}
+
+.todoContentContainer button {
+    border: none;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.acceptButton {
+    background-color: rgb(10, 77, 10);
+}
+
+.acceptButton:hover {
+    background-color: rgb(20, 143, 20);
+}
+
+.deleteButton {
+    background-color: rgb(134, 4, 4);
+}
+
+.deleteButton:hover {
+    background-color: rgb(194, 11, 11);
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.completedTodo {
+    background-color: rgba(51, 51, 51, 0.171);
+    opacity: 0;
+    transition: all 2s;
+}
+
+.completedTodo button {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.completedTodo p {
+    text-decoration: line-through;
+    transition: all 1s;
+}
